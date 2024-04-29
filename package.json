@@ -1,0 +1,30 @@
+{
+  "name": "champion",
+  "version": "1.0.0",
+  "description": "Open Source Billing",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-app-deps",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fillerInk/champion.git"
+  },
+  "author": "Sreeram Venkitesh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fillerInk/champion/issues"
+  },
+  "homepage": "https://github.com/fillerInk/champion#readme",
+  "dependencies": {
+    "bootstrap": "^4.5.0",
+    "electron": "^9.0.0",
+    "jquery": "^3.5.1",
+    "sql.js": "^0.4.0",
+    "sqlite3": "^4.2.0"
+  },
+  "devDependencies": {
+    "electron-build": "0.0.3"
+  }
+}

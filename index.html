@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 400px;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: dodgerblue;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .admin-btn {
+            background-color: dodgerblue;
+        }
+
+        .cashier-btn {
+            background-color: dodgerblue;
+        }
+
+        .btn:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Login</h2>
+        <form id="loginForm" action="login.php" method="post">
+            <input type="text" name="username" id="username" placeholder="Username" required>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <button type="submit" class="btn admin-btn">Admin Login</button>
+            <button type="submit" class="btn cashier-btn">Cashier Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Retrieve username and password
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Validate username and password (you can add your validation logic here)
+
+            // Redirect based on the type of login
+            if (username === "admin" && password === "admin123") {
+                window.location.href = "admin_page.html";
+            } else if (username === "cashier" && password === "cashierpassword") {
+                window.location.href = "cashier_page.html";
+            } else {
+                alert("Invalid username or password");
+            }
+        });
+    </script>
+</body>
+
+</html>
